@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سلة المشتريات</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="myFunctions.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-info shadow-sm">
+        <div class="container-fluid">
+
+            <a class="navbar-brand fs-3 fw-bold text-white" href="#">المكتبة الافتراضية السورية </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="التبديل التنقل">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- القوائم -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="home.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="AboutUs.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="Books.html">الكتب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white fs-5" href="Cart.html">سلة المشتريات</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <main>
+        <section>
+            <h2>قائمة الكتب</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>عنوان الكتاب</th>
+                        <th>السعر</th>
+                        <th>رمز الكتاب (ISBN)</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>إضافة إلى السلة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ألف ليلة وليلة</td>
+                        <td>25000 ل.س</td>
+                        <td>978-9770916738</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('ألف ليلة وليلة', 25000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images/الف ليلة وليلة.jpg" alt="غلاف الكتاب - ألف ليلة وليلة" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار المعارف<br>
+                            <strong>التصنيف:</strong> قصص شعبية<br>
+                            <strong>ملخص:</strong> مجموعة من القصص الشعبية من الشرق الأوسط.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>موسم الهجرة إلى الشمال</td>
+                        <td>12000 ل.س</td>
+                        <td>978-9953891718</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('موسم الهجرة إلى الشمال', 12000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images/موسم الهجرة الى الشمال.jpg" alt="غلاف الكتاب - موسم الهجرة الى الشمال" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> المؤسسة العربية للدراسات<br>
+                            <strong>التصنيف:</strong> رواية<br>
+                            <strong>ملخص:</strong> رواية تتناول قضايا الهوية والاختلاف الثقافي.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> نظرية الفوضى</td>
+                        <td>15000 ل.س</td>
+                        <td>978-1503250220</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart(' نظرية الفوضى', 15000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\نظرية الفوضى.jpg" alt="غلاف الكتاب -نظرية الفوضى " style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار المعارف<br>
+                            <strong>التصنيف:</strong> علم الأحياء<br>
+                            <strong>ملخص:</strong> استكشاف عميق لنظرية الفوضى وكيفية تفسير الأنماط غير المتوقعة والمعقدة في الظواهر الطبيعية والأنظمة الديناميكية.
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>الفيزياء الكونية</td>
+                        <td>12000 ل.س</td>
+                        <td>978-0230347282</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('الفيزياء الكونية', 12000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\الفيزياء الكونية.jpeg" alt="غلاف الكتاب - الفيزياء الكونية" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار الفكر<br>
+                            <strong>التصنيف:</strong> الفضاء وعلم الفلك<br>
+                            <strong>ملخص:</strong> دراسة شاملة للكون وأصل الكواكب والمجرات وكيفية تطورها عبر الزمن الكوني.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>الذكاء الاصطناعي</td>
+                        <td>18000 ل.س</td>
+                        <td>978-0134611137</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('الذكاء الاصطناعي', 18000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\الذكاء الاصطناعي.jpeg" alt="غلاف الكتاب - الذكاء الاصطناعي" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> أكاديمية النشر<br>
+                            <strong>التصنيف:</strong> تكنولوجيا<br>
+                            <strong>ملخص:</strong> تحليل لظهور الذكاء الاصطناعي في مختلف المجالات وابتكار الأنظمة القادرة على التعلم واتخاذ القرارات.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>علم النفس العصبي</td>
+                        <td>16000 ل.س</td>
+                        <td>978-0195375632</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('علم النفس العصبي', 16000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\علم النفس العصبي.jpeg" alt="غلاف الكتاب - علم النفس العصبي" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار النشر العلمي<br>
+                            <strong>التصنيف:</strong> علم النفس<br>
+                            <strong>ملخص:</strong> دراسة للعلاقة بين الدماغ والسلوك البشري وكيفية تأثير الأعصاب على الوظائف العقلية.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>الثورة الصناعية</td>
+                        <td>14000 ل.س</td>
+                        <td>978-0393973730</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('الثورة الصناعية', 14000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\الثورة الصناعية.jpeg" alt="غلاف الكتاب - الثورة الصناعية" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> مكتبة الأجيال<br>
+                            <strong>التصنيف:</strong> تاريخ<br>
+                            <strong>ملخص:</strong> تحليل تاريخي لتطور الثورة الصناعية وتأثيرها على الاقتصاد والمجتمع في القرن التاسع عشر.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>التطور البشري</td>
+                        <td>11000 ل.س</td>
+                        <td>978-0226182162</td>
+                        <td><button onclick="showDetails(this)">عرض التفاصيل</button></td>
+                        <td><button onclick="addToCart('التطور البشري', 11000)">إضافة</button></td>
+                    </tr>
+                    <tr class="details" style="display:none;">
+                        <td colspan="5">
+                            <img src="images\التطور البشري.jpeg" alt="غلاف الكتاب - التطور البشري" style="max-width: 150px; border-radius: 8px; margin-bottom: 10px;">
+                            <br>
+                            <strong>الناشر:</strong> دار الثقافة<br>
+                            <strong>التصنيف:</strong> الأنثروبولوجيا<br>
+                            <strong>ملخص:</strong> دراسة حول تطور الإنسان من الناحية البيولوجية والاجتماعية عبر العصور المختلفة.
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="row">
+
+                <div class="footer-column">
+                    <h4>موقع الكتب</h4>
+                    <p>
+                        اكتشف عالمًا من المعرفة والإلهام مع مكتبتنا! نقدم لك مجموعة متنوعة من الكتب في جميع المجالات لتلبي اهتماماتك وشغفك.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="home.html">الصفحة الرئيسية</a></li>
+                        <li><a href="AboutUs.html">من نحن</a></li>
+                        <li><a href="Books.html">الكتب</a></li>
+                        <li><a href="Cart.html">سلة المشتريات</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>اتصل بنا</h4>
+                    <ul>
+                        <li>الهاتف: +938837798+</li>
+                        <li> Email: RandHadeed12387@gmail.com</li>
+                        <li>العنوان: ادلب, سوريا</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p>&copy; 2024 جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
